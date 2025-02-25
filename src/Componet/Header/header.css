@@ -1,0 +1,164 @@
+/* .header-outer{
+    position: static;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(20,20,20);
+    background-color: transparent;
+    height: 10vh;
+    color: white;
+    transition: all 0.5s;
+    transition-timing-function: ease-in;
+    z-index: 1;
+    background-color: rgb(20,20,20);
+  
+ }
+.header-component{
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-left ul{
+     width: 30px;
+     display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    justify-content: space-between;
+    gap:20px ;
+ 
+
+
+}
+ .header-right ul{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    justify-content: space-between;
+    gap:20px ;
+   
+  
+} 
+ .header-left ul :hover{
+    width: 3px;
+  
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+
+
+}
+
+   */
+
+
+   /* Header Container */
+.header-outer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(20, 20, 20);
+    height: 10vh;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+/* Header Content */
+.header-component {
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Right-Side Icons */
+.header-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+/* Hover Effects */
+.nav-links li:hover,
+.header-right ul li:hover {
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+/* Mobile Menu (Hidden by default) */
+.mobile-menu {
+    display: none;
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Show Mobile Menu */
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-component {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none; /* Hide main nav */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: rgb(20, 20, 20);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
